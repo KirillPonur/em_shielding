@@ -49,6 +49,7 @@ for j in range(2):
         eta = V0/Ve * Ue/U0
         skin = c/np.sqrt(4*np.pi**2*sigma[j]*mu[j]*freq_ext)
         radius = R_IN + d_lat[i]
+        print(radius)
         mda = mu[j]*skin/radius
         amd = 1/mda
         eta_t_high = 1/6*np.exp(d_lat[i]/skin)*np.sqrt((mda + amd + 3)**2 + (amd - mda)**2)
