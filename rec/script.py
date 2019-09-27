@@ -55,7 +55,7 @@ for j in range(2):
         eta_t_high = 1/6*np.exp(d_lat[i]/skin)*np.sqrt((mda + amd + 3)**2 + (amd - mda)**2)
         eta_t_low = np.sqrt( (1+2/3*d_lat[i]/radius*(mu[j]-1)**2/mu[j])**2 + (2/3*radius*d_lat[i]/mu[j]/skin**2)**2 )
         print('Строим ', name, '...')
-        ax.plot(freq, eta,'o-',color = colors[i], label=name+' мм')
+        ax.plot(freq, eta,'o-',color = colors[i], label=name)
         ax.plot(freq_ext[freq_ext>cutoff[i]], eta_t_high[freq_ext>cutoff[i]],'--',color = colors[i])
         ax.plot(freq_ext[freq_ext<cutoff[i]], eta_t_low[freq_ext<cutoff[i]],'--',color = colors[i])
 
